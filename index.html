@@ -88,7 +88,7 @@ sentence();
 
 			var shakeEvent = new Shake({threshold: 15});
 			shakeEvent.start();
-			window.addEventListener('shake', function(){
+			window.addEventListener('shake', sentence(){
 				var element = document.getElementById("box");
 			    var r = getRandomInt(0, 255);
 			    var g = getRandomInt(0, 255);
