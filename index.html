@@ -79,7 +79,7 @@
 		function sentence() {
 			var rand1 = Math.floor(Math.random() * sent.length);
 			var content = sent[rand1];
-			document.getElementById('sentence').box = content;
+			document.getElementById('sentence').innerHTML = content;
 		};
 		sentence();
 
@@ -108,6 +108,9 @@
 	</head>
 
 	<body>
+		<div style="box-sizing:border-box;display:flex;justify-content:center;align-items:center">
+			<button style="" onclick="sentence()">Refresh<i class="fa fa-refresh" aria-hidden="true"></i></button>
+		</div>
 		<div class="container">
 			<p id="sentence"></p>
 		</div>
