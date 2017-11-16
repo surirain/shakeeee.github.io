@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<style type="text/css">
-			#box
+			#boxx
 			{
 				width: 300px;
 				height: 300px;
@@ -90,7 +90,7 @@
 			var shakeEvent = new Shake({threshold: 15});
 			shakeEvent.start();
 			window.addEventListener('shake', function(){
-				var element = document.getElementById("box");
+				var element = document.getElementById("boxx");
 			    var r = getRandomInt(0, 255);
 			    var g = getRandomInt(0, 255);
 			    var b = getRandomInt(0, 255);
@@ -112,10 +112,10 @@
 			<p id="sentence"></p>
 		</div>
 
-		Shake to change color of the box
-		<div id="box"></div>
+		Shake to change color of the boxx
+		<div id="boxx"></div>
 		<script type="text/javascript">
-			var element = document.getElementById("box");
+			var element = document.getElementById("boxx");
 			var r = getRandomInt(0, 255);
 			var g = getRandomInt(0, 255);
 			var b = getRandomInt(0, 255);
