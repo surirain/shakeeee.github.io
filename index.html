@@ -72,13 +72,14 @@
 		</style>
 		<script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
 		<script type="text/javascript">
+
 		var sent;
 		sent = ["how are you?", "omg are you in love?", "hohoho marry marry", "big boiiii huh?", "ur super duper", "are u in love?", "who u think is hot", "do u like cheese?"];
 
 		function sentence() {
 			var rand1 = Math.floor(Math.random() * sent.length);
 			var content = sent[rand1];
-			document.getElementById('sentence').innerHTML = content;
+			document.getElementById('sentence').box = content;
 		};
 		sentence();
 
@@ -105,8 +106,8 @@
 			if(!("ondevicemotion" in window)){alert("Not Supported");}
 		</script>
 	</head>
-	<body>
 
+	<body>
 		<div class="container">
 			<p id="sentence"></p>
 		</div>
@@ -120,6 +121,7 @@
 			var b = getRandomInt(0, 255);
 		    element.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
 		</script>
+
 		<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=qnimate" id="_carbonads_js"></script>
 
 			<script>
