@@ -47,23 +47,130 @@
 			    top: 5px;
 			    right: 5px;
 			}
+			.centered {
+  position: static; /* or absolute */
+  top: 25%;
+  left: 25%;
+}
+
+
+.circle {
+ vertical-align: middle;
+
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  font-size: 50px;
+  color: #fff;
+  line-height: 500px;
+  text-align: center;
+  background: #000066
+  vertical-align: middle;
+
+}
+body {
+  color: #2e2e2e;
+  font-family: sans-serif;
+  font-size: 21px;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.container {
+  background-color: #3FABF2;
+  color: whitesmoke;
+  position: relative;
+  /*                margin-top: 10vh;*/
+  height: 89vh;
+  padding-top: 14vh;
+  box-sizing: border-box;
+}
+
+.container p {
+  margin-top: 10vh;
+  padding: 5px;
+  line-height: 1.6;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  width: 73cr;
+  /*                top: 20vh;*/
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  margin-right: 20px;
+}
+
+/*button {
+  height: 60px;
+  justify-content: right;
+  outline: none;
+  font-famiy: sans-serif;
+  position: relative;
+  padding: 10px;
+  width: 120px;
+  left: 100vh;
+  border: none;
+  background-color: #fff;
+  border: 2px solid #1b1b1b;
+  color: #1b1b1b;
+  transition: 500ms ease-in;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+button i {
+  margin-left: 3px;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #1b1b1b;
+}*/
+
+.container:first-child {
+  height: 30vh !important;
+}
+
+@media screen and (max-width: 565px) {
+  .container p {
+    font-size: 17px;
+  }
+  div:first-child {
+    height: 2vh;
+  }
+}
+
+@media screen and (min-width: 565px) {
+  body {
+    text-align: center;
+  }
+}
 		</style>
 		<script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
 		<script type="text/javascript">
-			function getRandomInt(min, max) {
-			  return Math.floor(Math.random() * (max - min + 1)) + min;
-			}
+			// function getRandomInt(min, max) {
+			//   return Math.floor(Math.random() * (max - min + 1)) + min;
+			// }
+			var sent;
+sent = ["how are you?", "omg are you in love?", "hohoho marry marry", "big boiiii huh?", "ur super duper", "are u in love?", "who u think is hot", "do u like cheese?"];
+
+			function sentence() {
+    // var rand1 = Math.floor(Math.random() * sent.length);
+    // var content = sent[rand1];
+    document.getElementById('sentence').innerHTML = content;
+};
+sentence();
 
 			var shakeEvent = new Shake({threshold: 15});
 			shakeEvent.start();
 			window.addEventListener('shake', function(){
-				var element = document.getElementById("box");
-			    var r = getRandomInt(0, 255);
-			    var g = getRandomInt(0, 255);
-			    var b = getRandomInt(0, 255);
-
-			    element.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-			}, false);
+				var element = document.getElementById("sentence");
 
 			//stop listening
 			function stopShake(){
