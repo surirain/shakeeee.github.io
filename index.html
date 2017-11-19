@@ -76,6 +76,8 @@
 			@media screen and (min-width: 565px) {
 				body {
 					text-align: center;
+					background-image: url(https://i.giphy.com/media/l0HlI65K15xz2Iizu/source.gif);
+					
 				}
 			}
 		</style>
@@ -92,21 +94,10 @@
 			var content = sent[rand1];
 			document.getElementById('sentence').innerHTML = content;
 		};
-		// sentence();
-
-			// function getRandomInt(min, max) {
-			//   return Math.floor(Math.random() * (max - min + 1)) + min;
-			// }
 
 			var shakeEvent = new Shake({threshold: 15});
 			shakeEvent.start();
 			window.addEventListener('shake', function(){
-				// var element = document.getElementById("boxx");
-			  //   var r = getRandomInt(0, 255);
-			  //   var g = getRandomInt(0, 255);
-			  //   var b = getRandomInt(0, 255);
-        //
-			  //   element.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
 					sentence();
 			}, false);
 
@@ -127,15 +118,7 @@
 			<p id="sentence"></p>
 		</div>
 
-		Shake! 
-		<!-- <div id="boxx"></div>
-		<script type="text/javascript">
-			var element = document.getElementById("boxx");
-			var r = getRandomInt(0, 255);
-			var g = getRandomInt(0, 255);
-			var b = getRandomInt(0, 255);
-		    element.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-		</script> -->
+		Shake!
 
 			<script>
 			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
