@@ -19,6 +19,8 @@
 
 		<script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
 		<script type="text/javascript">
+
+		// DEFAULT WORKS !!!!!!!!!!!
     //
 		// var sent;
 		// sent = ["string only?",
@@ -30,16 +32,24 @@
 		// 				"who u think is hot",
 		// 				"do u like cheese?"];
 
-		var sent = ['testpic1.png',
-		 						'testpic2.png',
-								'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg'];
-		sent.forEach(function(image){
-			var img = document.createElement('img');
-			img.src = image;
-			img.height = "45";
-			img.width = "50";
-			document.head.appendChild(img);
-		});
+		// TRY1 NOPE :( !!!!!!!!!!!
+		//
+		// var sent = ['testpic1.png',
+		//  						'testpic2.png',
+		// 						'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg'];
+		// sent.forEach(function(image){
+		// 	var img = document.createElement('img');
+		// 	img.src = image;
+		// 	img.height = "45";
+		// 	img.width = "50";
+		// 	document.head.appendChild(img);
+		// });
+
+		// TRY2  !!!!!!!!!!!
+		var sent;
+		sent = ['testpic1.png',
+						'testpic2.png'
+		];
 
 		function sentence() {
 			var rand1 = Math.floor(Math.random() * sent.length);
