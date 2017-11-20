@@ -20,10 +20,7 @@
 		<script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
 		<script type="text/javascript">
     //
-		var sent;
-		sent = ['https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg',
-		 				'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg',
-						'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg'];
+		// var sent;
 		// sent = ["string only?",
 		// 				"omg are you in love?",
 		// 				"hohoho marry marry",
@@ -33,6 +30,16 @@
 		// 				"who u think is hot",
 		// 				"do u like cheese?"];
 
+		var sent = ['https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg',
+		 						'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg',
+								'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg'];
+		sent.forEach(function(image){
+			var img = document.createElement('img');
+			img.src = image;
+			img.height = "45";
+			img.width = "50";
+			document.body.appendChild(img);
+		});
 
 		function sentence() {
 			var rand1 = Math.floor(Math.random() * sent.length);
