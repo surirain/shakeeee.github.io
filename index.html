@@ -61,7 +61,7 @@
 			document.getElementById('sentence').innerHTML = content;
 		};
 
-			var shakeEvent = new Shake({threshold: 15});
+			var shakeEvent = new Shake({threshold: 1});
 			shakeEvent.start();
 			window.addEventListener('shake', function(){
 					sentence();
