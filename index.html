@@ -28,8 +28,6 @@
 		<script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
 		<script type="text/javascript">
 
-		// DEFAULT WORKS !!!!!!!!!!!
-    //
 		var sent;
 		sent = ["what’s a bad habit you have?",
 						"if you could change one thing about your body, what would it be?",
@@ -92,7 +90,8 @@
 			document.getElementById('sentence').innerHTML = content;
 		};
 
-			var shakeEvent = new Shake({threshold: 5});
+			// pick random string within array (sent), run sentence() onShake :)
+			var shakeEvent = new Shake({threshold: 8});
 			shakeEvent.start();
 			window.addEventListener('shake', function(){
 					sentence();
@@ -103,7 +102,7 @@
 				shakeEvent.stop();
 			}
 
-			if(!("ondevicemotion" in window)){alert("Not Supported");}
+			if(!("ondevicemotion" in window)){alert("upgrade required");}
 		</script>
 	</head>
 
